@@ -1,21 +1,25 @@
 {
   "name": "one-love-grooming",
   "version": "1.0.0",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "develop": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
-    "autoprefixer": "^10.4.20",
     "gatsby": "^5.14.1",
-    "gatsby-plugin-postcss": "^6.14.0",
-    "postcss": "^8.5.3",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "tailwindcss": "^4.0.8"
+    "gatsby-plugin-image": "^3.14.0",
+    "gatsby-plugin-sharp": "^5.14.0",
+    "gatsby-transformer-sharp": "^5.14.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.0.0",
+    "gatsby-plugin-google-fonts": "^1.0.1",
+    "gatsby-plugin-postcss": "^6.0.0",
+    "postcss": "^8.0.0",
+    "tailwindcss": "^3.0.0"
   }
 }

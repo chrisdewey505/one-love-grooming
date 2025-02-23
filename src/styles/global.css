@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f3ff; /* purple-50 */
+  color: #1f2937; /* gray-800 */
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  color: #c4b5fd; /* purple-300 */
+}
+
+a {
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+.paw-bg {
+  background-image: radial-gradient(circle, #c4b5fd 2px, transparent 2px);
+  background-size: 200px 200px;
+}
