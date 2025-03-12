@@ -19,7 +19,19 @@ export default function Home() {
       </header>
       <section className="py-16 px-6 max-w-4xl mx-auto text-center">
         <h2 className="text-4xl font-semibold mb-6">Mobile Luxury Grooming</h2>
-        <p className="text-lg">Premium pet care delivered in our state-of-the-art mobile van.</p>
+        <p className="text-lg">Our Signature Spa Experience
+
+Indulge your cherished companion with an unparalleled grooming ritual, meticulously crafted to pamper and rejuvenate. Each bath is a bespoke affair, featuring:
+
+    Hydra Luxe Bath: A coat-specific infusion of Hydra’s exquisite shampoo and conditioner, a premium formulation designed exclusively for discerning dogs and cats, leaving their fur irresistibly soft, lustrous, and radiant.
+    Precision Nail Care: Expert trimming and gentle buffing to ensure flawless paws, executed with the utmost finesse.
+    Paw & Nose Elegance: A lavish application of velvety paw butter and soothing nose cream, delivering hydration and comfort worthy of royalty.
+    Ear & Eye Serenity: Delicate ear cleaning and a refreshing eye flush, performed with precision to enhance clarity and well-being.
+    Enzymatic Dental Brilliance: A sophisticated teeth-cleaning process using enzymatic technology, promoting a sparkling smile and impeccable oral health.
+    Opulent Blowout: A masterful fluff and finish, transforming their coat into a masterpiece of volume and sheen.
+    Seasonal Fragrance Finale: The perfect touch—a spritz of our exclusive seasonal perfume or cologne, enveloping your pet in a subtle, elegant scent that lingers delightfully.
+
+All of this unfolds in a cage-free sanctuary, where your pet enjoys undivided, one-on-one attention from our skilled artisans. At One Love, we don’t merely groom—we curate an experience of pure luxury and grace, tailored to the most refined tastes..</p>
       </section>
 
       <section className="py-16 px-6 bg-gray-100 text-center">
