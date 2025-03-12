@@ -9,46 +9,49 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert('Form submitted! We’ll get back to you soon.');
+    alert('Message sent! We’ll respond soon.');
   };
 
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <div className="py-16 px-6 max-w-md mx-auto">
-        <h1 className="text-5xl font-bold mb-8 text-center text-purple-300">Contact Us</h1>
+        <h1 className="text-5xl font-bold mb-8 text-center text-gray-800">Contact Us</h1>
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
-            <label className="block mb-2 text-purple-300 font-semibold">Name</label>
+            <label htmlFor="name" className="block mb-2 text-gray-800 font-semibold">Name</label>
             <input
               type="text"
+              id="name"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-white"
+              className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-300"
               required
             />
           </div>
           <div>
-            <label className="block mb-2 text-purple-300 font-semibold">Email</label>
+            <label htmlFor="email" className="block mb-2 text-gray-800 font-semibold">Email</label>
             <input
               type="email"
+              id="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-white"
+              className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-300"
               required
             />
           </div>
           <div>
-            <label className="block mb-2 text-purple-300 font-semibold">Message</label>
+            <label htmlFor="message" className="block mb-2 text-gray-800 font-semibold">Message</label>
             <textarea
+              id="message"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
-              className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-white"
+              className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-300"
               rows="4"
               required
             />
           </div>
-          <button type="submit" className="w-full bg-white text-purple-300 font-semibold py-4 px-8 rounded-lg shadow-lg hover:bg-gray-100">
+          <button type="submit" className="w-full bg-gray-300 text-gray-800 font-semibold py-4 px-8 rounded-lg shadow-lg hover:bg-gray-400">
             Send Message
           </button>
         </form>

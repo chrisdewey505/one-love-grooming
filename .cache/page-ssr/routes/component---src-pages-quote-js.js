@@ -1,147 +1,48 @@
-exports.id = "component---src-pages-quote-js";
-exports.ids = ["component---src-pages-quote-js"];
+"use strict";
+exports.id = 657;
+exports.ids = [657];
 exports.modules = {
 
-/***/ "./src/components/Navbar.js":
-/*!**********************************!*\
-  !*** ./src/components/Navbar.js ***!
-  \**********************************/
+/***/ 2863:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ Navbar)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-
-function Navbar() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("nav", {
-    className: "bg-purple-300 text-white py-4 px-6 shadow-md"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "max-w-6xl mx-auto flex justify-between items-center"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
-    src: "/images/logo.jpg",
-    alt: "One Love Grooming Logo",
-    className: "h-12 w-auto"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "space-x-6 text-lg"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: "/",
-    className: "hover:text-gray-200"
-  }, "Home"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: "/services",
-    className: "hover:text-gray-200"
-  }, "Services"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: "/about",
-    className: "hover:text-gray-200"
-  }, "About"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: "/contact",
-    className: "hover:text-gray-200"
-  }, "Contact"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: "/quote",
-    className: "hover:text-gray-200"
-  }, "Quote"))));
-}
-
-/***/ }),
-
-/***/ "./src/pages/quote.js?export=default":
-/*!*******************************************!*\
-  !*** ./src/pages/quote.js?export=default ***!
-  \*******************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ Quote)
 /* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2594);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_Navbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Navbar */ "./src/components/Navbar.js");
-/* harmony import */ var _styles_global_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../styles/global.css */ "./src/styles/global.css");
-/* harmony import */ var _styles_global_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_styles_global_css__WEBPACK_IMPORTED_MODULE_2__);
-
-
-
-function Quote() {
-  const {
-    0: breed,
-    1: setBreed
-  } = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('Small');
-  const {
-    0: weight,
-    1: setWeight
-  } = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('');
-  const {
-    0: frequency,
-    1: setFrequency
-  } = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('Monthly');
-  const {
-    0: price,
-    1: setPrice
-  } = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null);
-  const calculatePrice = () => {
-    let basePrice = 50;
-    if (breed === 'Large') basePrice += 20;
-    if (weight > 50) basePrice += 10;
-    if (frequency === 'Weekly') basePrice -= 5;
-    setPrice(basePrice);
-  };
-  const handleSubmit = e => {
-    e.preventDefault();
-    calculatePrice();
-  };
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "min-h-screen flex flex-col"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Navbar__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "py-16 px-6 max-w-md mx-auto"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", {
-    className: "text-5xl font-bold mb-8 text-center text-purple-300"
-  }, "Get a Quote"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("form", {
-    onSubmit: handleSubmit,
-    className: "space-y-6"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", {
-    className: "block mb-2 text-purple-300 font-semibold"
-  }, "Breed Size"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("select", {
-    value: breed,
-    onChange: e => setBreed(e.target.value),
-    className: "w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-white"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option", null, "Small"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option", null, "Medium"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option", null, "Large"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", {
-    className: "block mb-2 text-purple-300 font-semibold"
-  }, "Weight (lbs)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
-    type: "number",
-    value: weight,
-    onChange: e => setWeight(e.target.value),
-    className: "w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-white",
-    required: true
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", {
-    className: "block mb-2 text-purple-300 font-semibold"
-  }, "Grooming Frequency"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("select", {
-    value: frequency,
-    onChange: e => setFrequency(e.target.value),
-    className: "w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-white"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option", null, "Weekly"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option", null, "Biweekly"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option", null, "Monthly"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
-    type: "submit",
-    className: "w-full bg-white text-purple-300 font-semibold py-4 px-8 rounded-lg shadow-lg hover:bg-gray-100"
-  }, "Calculate Price")), price && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "mt-6 text-center"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", {
-    className: "text-2xl font-semibold text-purple-300"
-  }, "Estimated Price: $", price))));
-}
+/* harmony import */ var _components_Navbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(9570);
+function Quote(){const{0:location,1:setLocation}=(0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('Huntington Beach');const{0:breed,1:setBreed}=(0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('Small');const{0:age,1:setAge}=(0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('');const{0:weight,1:setWeight}=(0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('');const{0:frequency,1:setFrequency}=(0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('Monthly');const{0:coatLength,1:setCoatLength}=(0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('Short');const{0:price,1:setPrice}=(0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null);const calculatePrice=()=>{let basePrice=120;// Base price for a small dog in Huntington Beach
+// Adjust for location
+if(location!=='Huntington Beach')basePrice+=25;// Extra for nearby areas
+// Adjust for breed size
+if(breed==='Small')basePrice-=10;if(breed==='Medium')basePrice-=10;if(breed==='Large')basePrice+=35;// Adjust for age (older pets may need extra care)
+if(age>=10)basePrice+=25;// Senior pet surcharge
+// Adjust for weight
+if(weight>30)basePrice+=30;if(weight>50)basePrice+=60;if(weight>65)basePrice+=90;// Adjust for frequency
+if(frequency==='Weekly')basePrice-=30;else if(frequency==='Biweekly')basePrice-=20;// Adjust for coat length
+if(coatLength==='short')basePrice-=20;if(coatLength==='Medium')basePrice+=30;if(coatLength==='Long')basePrice+=60;setPrice(basePrice);};const handleSubmit=e=>{e.preventDefault();calculatePrice();};return/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div",{className:"min-h-screen flex flex-col"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Navbar__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .A,null),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div",{className:"py-16 px-6 max-w-md mx-auto"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1",{className:"text-5xl font-bold mb-8 text-center text-gray-800"},"Get a Quote"),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("form",{onSubmit:handleSubmit,className:"space-y-6"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label",{htmlFor:"location",className:"block mb-2 text-gray-800 font-semibold"},"Location"),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("select",{id:"location",value:location,onChange:e=>setLocation(e.target.value),className:"w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-300"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option",null,"Huntington Beach"),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option",null,"Other Southern California"))),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label",{htmlFor:"breed",className:"block mb-2 text-gray-800 font-semibold"},"Breed Size"),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("select",{id:"breed",value:breed,onChange:e=>setBreed(e.target.value),className:"w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-300"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option",null,"Small"),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option",null,"Medium"),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option",null,"Large"))),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label",{htmlFor:"age",className:"block mb-2 text-gray-800 font-semibold"},"Age (Years)"),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input",{type:"number",id:"age",value:age,onChange:e=>setAge(e.target.value),className:"w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-300",required:true})),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label",{htmlFor:"weight",className:"block mb-2 text-gray-800 font-semibold"},"Weight (lbs)"),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input",{type:"number",id:"weight",value:weight,onChange:e=>setWeight(e.target.value),className:"w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-300",required:true})),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label",{htmlFor:"frequency",className:"block mb-2 text-gray-800 font-semibold"},"Grooming Frequency"),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("select",{id:"frequency",value:frequency,onChange:e=>setFrequency(e.target.value),className:"w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-300"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option",null,"Weekly"),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option",null,"Biweekly"),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option",null,"Monthly"))),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label",{htmlFor:"coatLength",className:"block mb-2 text-gray-800 font-semibold"},"Desired Coat Length"),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("select",{id:"coatLength",value:coatLength,onChange:e=>setCoatLength(e.target.value),className:"w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-300"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option",null,"Short"),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option",null,"Medium"),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option",null,"Long"))),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button",{type:"submit",className:"w-full bg-gray-300 text-gray-800 font-semibold py-4 px-8 rounded-lg shadow-lg hover:bg-gray-400"},"Calculate Price")),price&&/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div",{className:"mt-6 text-center"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2",{className:"text-2xl font-semibold text-gray-800"},"Estimated Price: $",price))));}
 
 /***/ }),
 
-/***/ "./src/styles/global.css":
-/*!*******************************!*\
-  !*** ./src/styles/global.css ***!
-  \*******************************/
-/***/ (() => {
+/***/ 9570:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  A: () => (/* binding */ Navbar)
+});
+
+// EXTERNAL MODULE: external "C:\\Users\\$RareWaffle\\OneDrive\\Desktop\\one-love-grooming\\node_modules\\react\\index.js"
+var external_C_Users_$RareWaffle_OneDrive_Desktop_one_love_grooming_node_modules_react_index_js_ = __webpack_require__(2594);
+var external_C_Users_$RareWaffle_OneDrive_Desktop_one_love_grooming_node_modules_react_index_js_default = /*#__PURE__*/__webpack_require__.n(external_C_Users_$RareWaffle_OneDrive_Desktop_one_love_grooming_node_modules_react_index_js_);
+;// ./src/images/logo4.png
+/* harmony default export */ const logo4 = ("/static/logo4-44b12bf2cf38f07f278c072ca663369f.png");
+;// ./src/components/Navbar.js
+// Adjust path to your logo
+function Navbar(){return/*#__PURE__*/external_C_Users_$RareWaffle_OneDrive_Desktop_one_love_grooming_node_modules_react_index_js_default().createElement("nav",{className:"bg-gradient-to-r from-gray-200 to-gray-300 text-gray-800 py-6 px-6 shadow-md"},/*#__PURE__*/external_C_Users_$RareWaffle_OneDrive_Desktop_one_love_grooming_node_modules_react_index_js_default().createElement("div",{className:"max-w-6xl mx-auto flex items-center justify-start"},/*#__PURE__*/external_C_Users_$RareWaffle_OneDrive_Desktop_one_love_grooming_node_modules_react_index_js_default().createElement("div",{className:"relative group"},/*#__PURE__*/external_C_Users_$RareWaffle_OneDrive_Desktop_one_love_grooming_node_modules_react_index_js_default().createElement("a",{href:"/",title:"Go to Home Page"},/*#__PURE__*/external_C_Users_$RareWaffle_OneDrive_Desktop_one_love_grooming_node_modules_react_index_js_default().createElement("img",{src:logo4,alt:"OG Grooming Logo",className:"h-36 w-auto object-contain transition-transform duration-300 group-hover:scale-105"})),/*#__PURE__*/external_C_Users_$RareWaffle_OneDrive_Desktop_one_love_grooming_node_modules_react_index_js_default().createElement("div",{className:"absolute top-full left-0 w-48 hidden group-hover:block bg-white p-4 shadow-lg z-50 border border-gray-300 fade-in"},/*#__PURE__*/external_C_Users_$RareWaffle_OneDrive_Desktop_one_love_grooming_node_modules_react_index_js_default().createElement("div",{className:"flex flex-col space-y-3"},/*#__PURE__*/external_C_Users_$RareWaffle_OneDrive_Desktop_one_love_grooming_node_modules_react_index_js_default().createElement("a",{href:"/services",className:"block w-full py-2 px-4 bg-gray-100 text-gray-800 rounded-full text-center font-semibold hover:bg-gray-200 transition-colors"},"Services"),/*#__PURE__*/external_C_Users_$RareWaffle_OneDrive_Desktop_one_love_grooming_node_modules_react_index_js_default().createElement("a",{href:"/about",className:"block w-full py-2 px-4 bg-gray-100 text-gray-800 rounded-full text-center font-semibold hover:bg-gray-200 transition-colors"},"About"),/*#__PURE__*/external_C_Users_$RareWaffle_OneDrive_Desktop_one_love_grooming_node_modules_react_index_js_default().createElement("a",{href:"/contact",className:"block w-full py-2 px-4 bg-gray-100 text-gray-800 rounded-full text-center font-semibold hover:bg-gray-200 transition-colors"},"Contact"),/*#__PURE__*/external_C_Users_$RareWaffle_OneDrive_Desktop_one_love_grooming_node_modules_react_index_js_default().createElement("a",{href:"/quote",className:"block w-full py-2 px-4 bg-gray-100 text-gray-800 rounded-full text-center font-semibold hover:bg-gray-200 transition-colors"},"Quote"))))));}
 
 /***/ })
 

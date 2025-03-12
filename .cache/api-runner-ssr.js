@@ -1,7 +1,11 @@
 var plugins = [{
       name: 'gatsby-plugin-google-fonts',
       plugin: require('C:/Users/$RareWaffle/OneDrive/Desktop/one-love-grooming/node_modules/gatsby-plugin-google-fonts/gatsby-ssr.js'),
-      options: {"plugins":[],"fonts":["Roboto:400,700","Playfair Display:400,700"],"display":"swap"},
+      options: {"plugins":[],"fonts":["Inter:400,700","Playfair Display:400,700"],"display":"swap"},
+    },{
+      name: 'gatsby-plugin-image',
+      plugin: require('C:/Users/$RareWaffle/OneDrive/Desktop/one-love-grooming/node_modules/gatsby-plugin-image/gatsby-ssr.js'),
+      options: {"plugins":[]},
     },{
       name: 'partytown',
       plugin: require('C:/Users/$RareWaffle/OneDrive/Desktop/one-love-grooming/node_modules/gatsby/dist/internal-plugins/partytown/gatsby-ssr.js'),

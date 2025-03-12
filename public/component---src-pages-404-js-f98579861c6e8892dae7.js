@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkone_love_grooming=self.webpackChunkone_love_grooming||[]).push([[125],{3331:function(e,n,t){t.r(n),t.d(n,{default:function(){return o}});var r=t(6540);function o(){return r.createElement("div",{className:"min-h-screen flex items-center justify-center bg-gray-100"},r.createElement("h1",{className:"text-4xl font-bold text-gray-800"},"404 - Page Not Found"))}}}]);
+//# sourceMappingURL=component---src-pages-404-js-f98579861c6e8892dae7.js.map
