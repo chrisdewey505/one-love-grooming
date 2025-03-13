@@ -1,58 +1,157 @@
-import React, { useState } from 'react';
-import Navbar from '../components/Navbar';
-import '../styles/global.css';
+import React, { useState } from "react";
+import Navbar from "../components/Navbar";
+import "../styles/global.css";
 
 export default function Contact() {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  const [formData, setFormData] = useState({
+    name: "",
+    breed: "",
+    age: "",
+    weight: "",
+    address: "",
+    services: "",
+    availability: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert('Message sent! We’ll respond soon.');
+    const { name, breed, age, weight, address, services, availability } = formData;
+    const message = `
+      New Contact Form Submission:
+      Name: ${name}
+      Breed: ${breed}
+      Age: ${age}
+      Estimated Weight: ${weight}
+      Address (Local Main Cross Streets): ${address}
+      Services Requested: ${services}
+      Best Times of Availability: ${availability}
+    `.trim();
+
+    // Use mailto to send the message to the T-Mobile SMS gateway
+    const smsEmail = "5097680499@tmomail.net"; // T-Mobile SMS gateway
+    window.location.href = `mailto:${smsEmail}?subject=Contact%20Form%20Submission&body=${encodeURIComponent(
+      message
+    )}`;
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-pastel-lavender text-white overflow-y-auto">
       <Navbar />
-      <div className="py-16 px-6 max-w-md mx-auto">
-        <h1 className="text-5xl font-bold mb-8 text-center text-gray-800">Contact Us</h1>
-        <form onSubmit={handleSubmit} className="space-y-6">
+      <div className="py-8 px-4 sm:px-6 max-w-md mx-auto text-pastel-lavender">
+        <h1 className="text-3xl sm:text-4xl font-bold mb-6 text-center text-gray-900">Contact Us</h1>
+        <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label htmlFor="name" className="block mb-2 text-gray-800 font-semibold">Name</label>
+            <label htmlFor="name" className="block mb-2 text-gray-900 font-semibold">
+              Name
+            </label>
             <input
               type="text"
               id="name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-300"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              className="w-full p-2 sm:p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pastel-lavender text-gray-900 bg-white"
               required
             />
           </div>
           <div>
-            <label htmlFor="email" className="block mb-2 text-gray-800 font-semibold">Email</label>
+            <label htmlFor="breed" className="block mb-2 text-gray-900 font-semibold">
+              Breed
+            </label>
             <input
-              type="email"
-              id="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-300"
+              type="text"
+              id="breed"
+              name="breed"
+              value={formData.breed}
+              onChange={handleChange}
+              className="w-full p-2 sm:p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pastel-lavender text-gray-900 bg-white"
               required
             />
           </div>
           <div>
-            <label htmlFor="message" className="block mb-2 text-gray-800 font-semibold">Message</label>
-            <textarea
-              id="message"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-300"
-              rows="4"
+            <label htmlFor="age" className="block mb-2 text-gray-900 font-semibold">
+              Age (Years)
+            </label>
+            <input
+              type="number"
+              id="age"
+              name="age"
+              value={formData.age}
+              onChange={handleChange}
+              className="w-full p-2 sm:p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pastel-lavender text-gray-900 bg-white"
               required
             />
           </div>
-          <button type="submit" className="w-full bg-gray-300 text-gray-800 font-semibold py-4 px-8 rounded-lg shadow-lg hover:bg-gray-400">
-            Send Message
+          <div>
+            <label htmlFor="weight" className="block mb-2 text-gray-900 font-semibold">
+              Estimated Weight (lbs)
+            </label>
+            <input
+              type="number"
+              id="weight"
+              name="weight"
+              value={formData.weight}
+              onChange={handleChange}
+              className="w-full p-2 sm:p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pastel-lavender text-gray-900 bg-white"
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor="address" className="block mb-2 text-gray-900 font-semibold">
+              Address (Local Main Cross Streets)
+            </label>
+            <input
+              type="text"
+              id="address"
+              name="address"
+              value={formData.address}
+              onChange={handleChange}
+              className="w-full p-2 sm:p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pastel-lavender text-gray-900 bg-white"
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor="services" className="block mb-2 text-gray-900 font-semibold">
+              Services Requested
+            </label>
+            <textarea
+              id="services"
+              name="services"
+              value={formData.services}
+              onChange={handleChange}
+              className="w-full p-2 sm:p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pastel-lavender text-gray-900 bg-white"
+              rows="3"
+              required
+            ></textarea>
+          </div>
+          <div>
+            <label htmlFor="availability" className="block mb-2 text-gray-900 font-semibold">
+              Best Times of Availability (8 AM - 3 PM, Monday-Sunday)
+            </label>
+            <input
+              type="text"
+              id="availability"
+              name="availability"
+              value={formData.availability}
+              onChange={handleChange}
+              className="w-full p-2 sm:p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pastel-lavender text-gray-900 bg-white"
+              placeholder="e.g., Monday 10 AM - 12 PM"
+              required
+            />
+          </div>
+          <button
+            type="submit"
+            className="w-full bg-pastel-lavender text-gray-900 font-semibold py-2 sm:py-3 px-4 rounded-lg shadow-md hover:bg-gray-200 transition"
+          >
+            Send
           </button>
         </form>
       </div>

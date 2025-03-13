@@ -1,47 +1,63 @@
-import React from 'react';
-import logo from '../images/logo4.png'; // Adjust path to your logo
+import React from "react";
+import logoImage from "../images/logo4.png"; // Adjust path to your logo; use as a placeholder
+import instagramIcon from "../images/instagram.png"; // Instagram icon
+import yelpIcon from "../images/yelp.png"; // Yelp icon
 
 export default function Navbar() {
   return (
-    <nav className="bg-gradient-to-r from-gray-200 to-gray-300 text-gray-800 py-6 px-6 shadow-md">
-      <div className="max-w-6xl mx-auto flex items-center justify-start">
-        <div className="relative group">
-          <a href="/" title="Go to Home Page">
-            <img
-              src={logo}
-              alt="OG Grooming Logo"
-              className="h-36 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
-            />
-          </a>
-          <div className="absolute top-full left-0 w-48 hidden group-hover:block bg-white p-4 shadow-lg z-50 border border-gray-300 fade-in">
-            <div className="flex flex-col space-y-3">
-              <a
-                href="/services"
-                className="block w-full py-2 px-4 bg-gray-100 text-gray-800 rounded-full text-center font-semibold hover:bg-gray-200 transition-colors"
-              >
-                Services
-              </a>
-              <a
-                href="/about"
-                className="block w-full py-2 px-4 bg-gray-100 text-gray-800 rounded-full text-center font-semibold hover:bg-gray-200 transition-colors"
-              >
-                About
-              </a>
-              <a
-                href="/contact"
-                className="block w-full py-2 px-4 bg-gray-100 text-gray-800 rounded-full text-center font-semibold hover:bg-gray-200 transition-colors"
-              >
-                Contact
-              </a>
-              <a
-                href="/quote"
-                className="block w-full py-2 px-4 bg-gray-100 text-gray-800 rounded-full text-center font-semibold hover:bg-gray-200 transition-colors"
-              >
-                Quote
-              </a>
-            </div>
-          </div>
-        </div>
+    <nav className="bg-pastel-lavender max-w-xl mx-auto flex items-center justify-between py-4 px-4 shadow-lg border-b-2 border-white/20 rounded-b-lg">
+      <a href="/" className="flex items-center space-x-2 mr-8">
+        <img src={logoImage} alt="One Love Logo" className="h-8 w-auto" />
+        <h1
+          className="text-2xl sm:text-3xl font-cursive text-gray-900 hover:text-black transition-colors"
+          style={{ textShadow: "1px 1px 2px rgba(0, 0, 0, 0.2)" }}
+        >
+          One<u>L</u>ove
+        </h1>
+      </a>
+      <div className="flex items-center space-x-6">
+        {/* Instagram Icon */}
+        <a
+          href="https://www.instagram.com/onelovegrooming/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-900 hover:text-pastel-lavender transition-colors"
+        >
+          <img src={instagramIcon} alt="Instagram" className="w-10 h-7" /> {/* 20% wider */}
+        </a>
+        {/* Yelp Icon */}
+        <a
+          href="https://www.yelp.com/biz/one-love-mobile-grooming-huntington-beach?utm_campaign=www_business_share_popup&utm_medium=copy_link&utm_source=(direct)"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-900 hover:text-pastel-lavender transition-colors mr-1"
+        >
+          <img src={yelpIcon} alt="Yelp" className="w-28 h-12" /> {/* 20% wider */}
+        </a>
+        <a
+          href="/services"
+          className="text-sm sm:text-base text-gray-900 hover:text-pastel-lavender transition-colors"
+        >
+          Services
+        </a>
+        <a
+          href="/about"
+          className="text-sm sm:text-base text-gray-900 hover:text-pastel-lavender transition-colors"
+        >
+          About
+        </a>
+        <a
+          href="/contact"
+          className="text-sm sm:text-base text-gray-900 hover:text-pastel-lavender transition-colors"
+        >
+          Contact
+        </a>
+        <a
+          href="/quote"
+          className="text-sm sm:text-base text-gray-900 hover:text-pastel-lavender transition-colors"
+        >
+          Quote
+        </a>
       </div>
     </nav>
   );

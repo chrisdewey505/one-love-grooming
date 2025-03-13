@@ -1,31 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --pastel-lavender: #E6E6FA;
+  --white: #FFFFFF;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: 'Inter', sans-serif;
-  background-color: #E5E7EB; /* gray-200 */
-  color: #1F2937; /* gray-800 */
+  margin: 0;
+  padding: 0;
+  background-color: var(--pastel-lavender);
+  color: var(--white);
+  font-family: "Arial", sans-serif;
 }
 
-h1, h2, h3 {
-  font-family: 'Playfair Display', serif;
-  color: #1F2937; /* gray-800 */
+.bg-pastel-lavender {
+  background-color: var(--pastel-lavender);
 }
 
-a {
-  transition: all 0.3s ease;
+.text-pastel-lavender {
+  color: var(--pastel-lavender);
 }
 
-a:hover {
-  opacity: 0.8;
+.hover-glow {
+  transition: box-shadow 0.3s ease;
 }
 
-.silver-accent {
-  background-color: #C0C0C0; /* Metallic silver */
-  color: #FFFFFF; /* White */
-}
-
-.silver-border {
-  border-color: #C0C0C0; /* Metallic silver */
+.hover-glow:hover {
+  box-shadow: 0 0 15px rgba(230, 230, 250, 0.7);
 }

@@ -1,102 +1,80 @@
 import React from "react";
 import Navbar from "../components/Navbar";
+import Review from "../components/Review";
 import "../styles/global.css";
-import vanImage from "../images/logo.png"; // Ensure this points to your van sketch or logo
+import logoImage from "../images/Max.jpg";
+import backgroundImage from "../images/logo.png"; // Background image
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col">
-      <Navbar />
-      <header className="bg-gradient-to-r from-gray-100 to-gray-200 text-gray-800 py-20 px-6 text-center relative">
-        <h1 className="text-5xl md:text-6xl font-bold mb-4">
-          <u>One Love Mobile Grooming</u>
-        </h1>
-        <p className="text-xl md:text-2xl mb-8 italic">Cutting-edge grooming at your doorstep</p>
-        <a
-          href="/services"
-          className="inline-block bg-gray-400 text-white font-semibold py-4 px-8 rounded-lg shadow-lg hover:bg-gray-500"
-        >
-          <strong>Explore Our Services</strong>
-        </a>
-        <div className="absolute bottom-10 right-20 opacity-15">
-          <img src={vanImage} alt="Mobile Van" className="w-40" />
+    <div className="relative min-h-screen flex flex-col bg-pastel-lavender text-white overflow-y-auto">
+      {/* Translucent Background Image for the Entire Page */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src={backgroundImage}
+          alt="Logo Background"
+          className="w-full h-full object-contain opacity-15 bg-no-repeat"
+          style={{
+            backgroundSize: "50%",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            backgroundAttachment: "fixed",
+          }}
+        />
+      </div>
+      {/* Overlay for better text readability */}
+      <div className="absolute inset-0 bg-pastel-lavender/70 z-10"></div>
+      <div className="relative z-20">
+        <Navbar />
+        <header className="bg-transparent py-8 px-6 text-center border-2 border-white/20 rounded-b-lg">
+          <div className="flex justify-center items-center flex-col">
+            <h1
+              className="text-4xl sm:text-6xl md:text-8xl font-cursive mb-1 text-center transform hover:scale-105 transition duration-300 hover-glow text-gray-900"
+              style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.3)" }}
+            >
+              One<u>L</u>ove
+            </h1>
+            <h2 className="text-2xl sm:text-2xl md:text-3xl mb-2 font-light text-gray-900">
+              Mobile Grooming
+            </h2>
+            <p className="text-lg sm:text-lg md:text-xl mb-2 text-gray-700">
+              Cutting-edge grooming at your doorstep
+            </p>
+            {/* Wrapper for Image and Button */}
+            <div className="relative">
+              <img
+                src={logoImage}
+                alt="Logo"
+                className="w-64 sm:w-96 md:w-[32rem] mx-auto my-1 rounded-lg shadow-md"
+              />
+              <a
+                href="/services"
+                className="absolute bottom-[25%] left-1/2 transform -translate-x-1/2 bg-white bg-opacity-80 text-black font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-gray-200 hover-glow transition"
+              >
+                <strong>Explore Our Services</strong>
+              </a>
+            </div>
+          </div>
+        </header>
+        {/* Decorative Clip (Paw Print) */}
+        <div className="text-center my-2">
+          <svg
+            className="w-12 h-12 mx-auto text-pastel-lavender"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 14v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+          </svg>
         </div>
-      </header>
-      <section className="py-16 px-6 max-w-4xl mx-auto text-center">
-        <h2 className="text-4xl font-semibold mb-6">
-          <u>Mobile Luxury Grooming</u>
-        </h2>
-        <h3 className="text-2xl font-bold mb-4">
-          <strong>Our Signature Spa Experience</strong>
-        </h3>
-        <p className="text-lg text-gray-700 mb-4">
-          Indulge your cherished companion with an unparalleled grooming ritual, meticulously
-          crafted to pamper and rejuvenate. Each bath is a bespoke affair, featuring:
-        </p>
-        <ul className="text-lg text-gray-700 list-disc list-inside mb-4 space-y-4">
-          <li>
-            <strong>
-              <u>Hydra Luxe Bath</u>
-            </strong>
-            : A coat-specific infusion of Hydra’s exquisite shampoo and conditioner, a premium
-            formulation designed exclusively for discerning dogs and cats, leaving their fur
-            irresistibly soft, lustrous, and radiant.
-          </li>
-          <li>
-            <strong>
-              <u>Precision Nail Care</u>
-            </strong>
-            : Expert trimming and gentle buffing to ensure flawless paws, executed with the utmost
-            finesse.
-          </li>
-          <li>
-            <strong>
-              <u>Paw & Nose Elegance</u>
-            </strong>
-            : A lavish application of velvety paw butter and soothing nose cream, delivering
-            hydration and comfort worthy of royalty.
-          </li>
-          <li>
-            <strong>
-              <u>Ear & Eye Serenity</u>
-            </strong>
-            : Delicate ear cleaning and a refreshing eye flush, performed with precision to enhance
-            clarity and well-being.
-          </li>
-          <li>
-            <strong>
-              <u>Enzymatic Dental Brilliance</u>
-            </strong>
-            : A sophisticated teeth-cleaning process using enzymatic technology, promoting a
-            sparkling smile and impeccable oral health.
-          </li>
-          <li>
-            <strong>
-              <u>Opulent Blowout</u>
-            </strong>
-            : A masterful fluff and finish, transforming their coat into a masterpiece of volume
-            and sheen.
-          </li>
-          <li>
-            <strong>
-              <u>Seasonal Fragrance Finale</u>
-            </strong>
-            : The perfect touch—a spritz of our exclusive seasonal perfume or cologne, enveloping
-            your pet in a subtle, elegant scent that lingers delightfully.
-          </li>
-        </ul>
-        <p className="text-lg text-gray-700">
-          All of this unfolds in a cage-free sanctuary, where your pet enjoys undivided, one-on-one
-          attention from our skilled artisans. At One Love, we don’t merely groom—we curate an
-          experience of pure luxury and grace, tailored to the most refined tastes.
-        </p>
-      </section>
-      <section className="py-16 px-6 bg-gray-100 text-center">
-        <h2 className="text-4xl font-semibold mb-6">
-          <u>Book Your Appointment</u>
-        </h2>
-        <p className="text-lg text-gray-800 italic">Booking system coming soon!</p>
-      </section>
+        <Review />
+        <section className="bg-transparent py-8 px-6 text-pastel-lavender text-center border-2 border-white/20 rounded-lg">
+          <h2 className="text-4xl font-semibold mb-4">
+            <u>Book Your Appointment</u>
+          </h2>
+          <p className="text-lg italic">Booking system coming soon!</p>
+        </section>
+      </div>
     </div>
   );
 }
