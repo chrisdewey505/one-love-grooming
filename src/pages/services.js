@@ -39,7 +39,7 @@ export default function Services() {
           </div>
           <p className="text-lg mb-4 text-center text-gray-800">
             Indulge your cherished companion with an unparalleled grooming ritual, meticulously
-            crafted to pamper and rejuvenate. Each bath is a bespoke affair, featuring:
+            crafted to pamper and rejuvenate. Each bath is breed tailored, featuring:
           </p>
           <ul className="text-lg list-disc list-inside mb-4 space-y-4 text-center mx-auto max-w-2xl border-2 border-dashed border-white rounded-lg p-4 bg-white/10 text-gray-800">
             <li>
