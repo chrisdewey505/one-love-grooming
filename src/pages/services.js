@@ -11,7 +11,10 @@ export default function Services() {
         <img
           src={frenchieImage}
           alt="Frenchie Beach Background"
-          className="w-80 sm:w-96 md:w-[32rem] h-full object-contain opacity-01 bg-no-repeat" // Increased mobile image size
+          className="w-full h-full object-cover opacity-01 bg-no-repeat" // Centered and fills the page
+          style={{
+            backgroundPosition: "center",
+          }}
         />
       </div>
       {/* Overlay for better text readability */}

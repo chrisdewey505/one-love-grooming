@@ -7,7 +7,7 @@ export default function Navbar() {
   return (
     <nav className="bg-pastel-lavender max-w-xl mx-auto flex items-center justify-between py-4 px-4 shadow-lg border-b-2 border-white/20 rounded-b-lg">
       <a href="/" className="flex items-center space-x-1 sm:space-x-2 mr-2 sm:mr-8">
-        <img src={logoImage} alt="One Love Logo" className="h-4 sm:h-8 w-auto" /> {/* Reduced to half size */}
+        <img src={logoImage} alt="One Love Logo" className="h-4 sm:h-8 w-auto" />
         <h1
           className="text-2xl sm:text-3xl font-cursive text-gray-900 hover:text-black transition-colors"
           style={{ textShadow: "1px 1px 2px rgba(0, 0, 0, 0.2)" }}
@@ -21,7 +21,7 @@ export default function Navbar() {
           href="https://www.instagram.com/onelovegrooming/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-900 hover:text-pastel-lavender transition-colors"
+          className="text-gray-900 hover:text-pastel-lavender transition-colors mr-0 sm:mr-1" // Moved closer to Yelp
         >
           <img src={instagramIcon} alt="Instagram" className="w-10 h-7" />
         </a>
