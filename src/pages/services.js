@@ -11,7 +11,7 @@ export default function Services() {
         <img
           src={frenchieImage}
           alt="Frenchie Beach Background"
-          className="w-full h-full object-contain opacity-01 bg-no-repeat"
+          className="w-80 sm:w-96 md:w-[32rem] h-full object-contain opacity-01 bg-no-repeat" // Increased mobile image size
         />
       </div>
       {/* Overlay for better text readability */}
@@ -84,7 +84,7 @@ export default function Services() {
             </li>
           </ul>
           <p className="text-lg text-center text-gray-800">
-            All of this unfolds in a cage-free Spa with one-on-one attention from our artisans.
+            All of this unfolds in a cage-free sanctuary with one-on-one attention from our artisans.
             At One Love, we curate an experience of pure luxury and grace.
           </p>
         </section>

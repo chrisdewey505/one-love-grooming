@@ -6,7 +6,7 @@ import yelpIcon from "../images/yelp.png"; // Yelp icon
 export default function Navbar() {
   return (
     <nav className="bg-pastel-lavender max-w-xl mx-auto flex items-center justify-between py-4 px-4 shadow-lg border-b-2 border-white/20 rounded-b-lg">
-      <a href="/" className="flex items-center space-x-2 mr-8">
+      <a href="/" className="flex items-center space-x-2 mr-2 sm:mr-8">
         <img src={logoImage} alt="One Love Logo" className="h-8 w-auto" />
         <h1
           className="text-2xl sm:text-3xl font-cursive text-gray-900 hover:text-black transition-colors"
@@ -15,7 +15,7 @@ export default function Navbar() {
           One<u>L</u>ove
         </h1>
       </a>
-      <div className="flex items-center space-x-6">
+      <div className="flex items-center space-x-2 sm:space-x-6">
         {/* Instagram Icon */}
         <a
           href="https://www.instagram.com/onelovegrooming/"
@@ -23,7 +23,7 @@ export default function Navbar() {
           rel="noopener noreferrer"
           className="text-gray-900 hover:text-pastel-lavender transition-colors"
         >
-          <img src={instagramIcon} alt="Instagram" className="w-10 h-7" /> {/* 20% wider */}
+          <img src={instagramIcon} alt="Instagram" className="w-10 h-7" />
         </a>
         {/* Yelp Icon */}
         <a
@@ -32,29 +32,29 @@ export default function Navbar() {
           rel="noopener noreferrer"
           className="text-gray-900 hover:text-pastel-lavender transition-colors mr-1"
         >
-          <img src={yelpIcon} alt="Yelp" className="w-28 h-12" /> {/* 20% wider */}
+          <img src={yelpIcon} alt="Yelp" className="w-28 h-12" />
         </a>
         <a
           href="/services"
-          className="text-sm sm:text-base text-gray-900 hover:text-pastel-lavender transition-colors"
+          className="text-xs sm:text-base text-gray-900 hover:text-pastel-lavender transition-colors"
         >
           Services
         </a>
         <a
           href="/about"
-          className="text-sm sm:text-base text-gray-900 hover:text-pastel-lavender transition-colors"
+          className="text-xs sm:text-base text-gray-900 hover:text-pastel-lavender transition-colors"
         >
           About
         </a>
         <a
           href="/contact"
-          className="text-sm sm:text-base text-gray-900 hover:text-pastel-lavender transition-colors"
+          className="text-xs sm:text-base text-gray-900 hover:text-pastel-lavender transition-colors"
         >
           Contact
         </a>
         <a
           href="/quote"
-          className="text-sm sm:text-base text-gray-900 hover:text-pastel-lavender transition-colors"
+          className="text-xs sm:text-base text-gray-900 hover:text-pastel-lavender transition-colors"
         >
           Quote
         </a>
