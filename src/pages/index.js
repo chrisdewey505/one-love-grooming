@@ -29,7 +29,7 @@ export default function Home() {
         <header className="bg-transparent py-8 px-6 text-center border-2 border-white/20 rounded-b-lg">
           <div className="flex justify-center items-center flex-col">
             <h1
-              className="text-5xl sm:text-7xl md:text-9xl font-cursive mb-1 text-center transform hover:scale-105 transition duration-300 hover-glow text-gray-900" // Increased header size
+              className="text-5xl sm:text-7xl md:text-9xl font-cursive mb-1 text-center transform hover:scale-105 transition duration-300 hover-glow text-gray-900"
               style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.3)" }}
             >
               One<u>L</u>ove
@@ -45,11 +45,11 @@ export default function Home() {
               <img
                 src={logoImage}
                 alt="Logo"
-                className="w-80 sm:w-96 md:w-[32rem] mx-auto my-1 rounded-lg shadow-md" // Increased mobile image size
+                className="w-full max-w-[32rem] mx-auto my-1 rounded-lg shadow-md" // Edge-to-edge on mobile with max width
               />
               <a
                 href="/services"
-                className="absolute bottom-[10%] left-1/2 transform -translate-x-1/2 bg-white bg-opacity-80 text-black font-semibold py-1 px-2 rounded-full shadow-lg hover:bg-gray-200 hover-glow transition text-xs" // Adjusted position to bottom-[10%]
+                className="absolute bottom-[25%] left-1/2 transform -translate-x-1/2 bg-white bg-opacity-80 text-black font-semibold py-1 px-2 rounded-full shadow-lg hover:bg-gray-200 hover-glow transition text-xs" // Reverted to bottom-[25%]
               >
                 <strong>Explore Our Services</strong>
               </a>
