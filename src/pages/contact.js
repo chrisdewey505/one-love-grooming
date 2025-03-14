@@ -35,11 +35,9 @@ export default function Contact() {
       Best Times of Availability: ${availability}
     `.trim();
 
-    // Use mailto to send the message to the T-Mobile SMS gateway
-    const smsEmail = "5097680499@tmomail.net"; // T-Mobile SMS gateway
-    window.location.href = `mailto:${smsEmail}?subject=Contact%20Form%20Submission&body=${encodeURIComponent(
-      message
-    )}`;
+    // Use sms: scheme to prompt a direct SMS
+    const phoneNumber = "5097680499"; // Your phone number
+    window.location.href = `sms:${phoneNumber}?body=${encodeURIComponent(message)}`;
   };
 
   return (

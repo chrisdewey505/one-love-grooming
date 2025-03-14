@@ -49,7 +49,7 @@ export default function Home() {
               />
               <a
                 href="/services"
-                className="absolute bottom-[25%] left-1/2 transform -translate-x-1/2 bg-white bg-opacity-80 text-black font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-gray-200 hover-glow transition"
+                className="absolute bottom-[25%] left-1/2 transform -translate-x-1/2 bg-white bg-opacity-80 text-black font-semibold py-1 px-2 rounded-full shadow-lg hover:bg-gray-200 hover-glow transition text-xs" // Reduced size further
               >
                 <strong>Explore Our Services</strong>
               </a>
